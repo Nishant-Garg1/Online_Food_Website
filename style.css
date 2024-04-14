@@ -1,0 +1,782 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+/* Here Utility Class Is Started */
+.reuse-btn {
+  width: 30%;
+  padding: 20px 1px;
+  word-spacing: 2px;
+  text-transform: capitalize;
+  font-size: 25px;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  color: white;
+  font-weight: bold;
+  text-align: center;
+  background: linear-gradient(25deg, orange, yellow);
+}
+.reuse-btn:hover {
+  background: linear-gradient(
+    25deg,
+    rgba(7, 220, 110, 0.7),
+    rgba(7, 220, 110, 0.7)
+  );
+}
+/* End of Utility class  */
+/*  navbar section */
+nav {
+  width: 100%;
+  height: 10vh;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 5px 51px;
+  background-color: rgb(255, 247, 233);
+  box-shadow: 0px 0px 20px 1px rgb(168, 163, 163);
+  position: fixed;
+  top: 0;
+  z-index: 99999;
+}
+.logo {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.img-logo {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.img-logo img {
+  width: 45px;
+  height: 45px;
+  margin-right: 8px;
+}
+.img-logo h3 {
+  font-size: 25px;
+}
+.menu {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 51px;
+}
+.manu-link {
+  display: flex;
+  gap: 11px;
+}
+.menu a {
+  text-decoration: none;
+  text-transform: capitalize;
+  font-size: 22px;
+  color: rgb(53, 52, 52);
+  font-weight: lighter;
+  padding: 10px 16px;
+  border-radius: 3px;
+  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
+}
+.active {
+  background-color: rgb(63, 241, 146);
+}
+.menu a:hover {
+  background-color: rgb(63, 241, 146);
+}
+.login-btn a {
+  padding: 14px 55px;
+  border-radius: 6px;
+  color: white;
+  font-weight: bold;
+}
+/* End of Navbar */
+
+/* Start Main Section */
+
+main {
+  width: 100%;
+  height: 90vh;
+  margin-top: 10vh;
+  position: relative;
+}
+.imginfo {
+  width: 100%;
+  height: 90vh;
+  overflow: hidden;
+}
+.images {
+  width: 500vw;
+  height: 90vh;
+  animation: ani 15s linear infinite;
+}
+@keyframes ani {
+  0% {
+    transform: translateX(0);
+  }
+  20% {
+    transform: translateX(0);
+  }
+  27% {
+    transform: translateX(-100vw);
+  }
+  40% {
+    transform: translateX(-100vw);
+  }
+  47% {
+    transform: translateX(-200vw);
+  }
+  60% {
+    transform: translateX(-200vw);
+  }
+  67% {
+    transform: translateX(-300vw);
+  }
+  80% {
+    transform: translateX(-300vw);
+  }
+  87% {
+    transform: translateX(-400vw);
+  }
+  100% {
+    transform: translateX(-400vw);
+  }
+}
+.imginfo img {
+  width: 100vw;
+  height: 90vh;
+  float: left;
+}
+
+main .info {
+  width: 100%;
+  height: 90vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 30px;
+  position: absolute;
+  padding: 100px 300px;
+  z-index: 999;
+}
+main .info h1 {
+  text-transform: uppercase;
+  text-align: center;
+  font-size: 80px;
+  font-weight: bold;
+  color:yellow;
+  text-shadow: -2px -2px 5px rgb(245, 230, 230);
+}
+main .info p {
+  font-size: 25px;
+  line-height: 36px;
+  font-weight: 500;
+  text-align: center;
+  color: white;
+}
+
+/* End Of Main Section */
+
+/*   <!-- Dish section --> */
+.dish {
+  width: 100%;
+  padding: 50px 60px;
+}
+.heading {
+  width: 100%;
+  height: 10vh;
+  background-image: url("./img/cook\ logo.png");
+  background-size: cover;
+}
+.heading h1 {
+  width: 100%;
+  text-transform: uppercase;
+  font-weight: bold;
+  color: black;
+  text-align: center;
+  font-size: 40px;
+  word-spacing: 11px;
+  color: red;
+  padding-top: 11px;
+}
+.heading h2 {
+  text-align: center;
+  font-size: 30px;
+  text-transform: uppercase;
+  word-spacing: 4px;
+}
+.box-container {
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  align-items: center;
+  gap: 51px;
+  margin-top: 50px;
+}
+.food-card {
+  width: 25%;
+  height: auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 15px;
+  padding-bottom: 21px;
+  cursor: pointer;
+  border-radius: 11px;
+  box-shadow: 0px 0px 5px 1px rgb(203, 199, 199);
+  transition: all 0.5s ease;
+}
+.food-card:hover {
+  transform: scale(1.01);
+  animation: anim 2s alternate infinite ease-in-out;
+}
+@keyframes anim {
+  0% {
+    background-color: white;
+  }
+  100% {
+    background-color: rgba(0, 255, 238, 0.3);
+  }
+}
+.food-card img {
+  border-radius: 6px 6px 0px 0px;
+  width: 100%;
+}
+.stars i {
+  color: gold;
+}
+.food-info {
+  display: flex;
+  flex-direction: column;
+  gap: 11px;
+  padding: 0px 12px;
+}
+.food-info h2 {
+  text-transform: capitalize;
+}
+.food-info p {
+  font-size: 19px;
+  font-weight: 500;
+  text-align: justify;
+}
+.price-btn {
+  width: 100%;
+  display: flex;
+  gap: 11px;
+  justify-content: space-between;
+  padding-left: 5px;
+  align-items: center;
+  margin-top: 10px;
+}
+.price-btn h2 {
+  color: rgb(25, 4, 68);
+  font-weight: bold;
+  font-size: 30px;
+  letter-spacing: 2px;
+}
+.price-btn a {
+  text-decoration: none;
+  text-transform: capitalize;
+  font-size: 18px;
+  font-weight: bold;
+  color: white;
+  padding: 16px 25px;
+  background-color: rgb(25, 4, 68);
+  border-radius: 5px;
+  margin-left: 20px;
+}
+.price-btn a:hover {
+  background-color: brown;
+}
+
+/* Dish Section */
+
+/* About section */
+.aboutus {
+  width: 100%;
+  height: auto;
+}
+.about-head {
+  margin-top: 20px;
+}
+.imgtext {
+  width: 100%;
+  height: auto;
+  display: flex;
+  justify-content: center;
+  margin-top: 51px;
+}
+.img-info {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  padding-left: 11px;
+}
+.img-info img {
+  width: 80%;
+  height: 100%;
+  border-radius: 11px;
+}
+.text-info {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+}
+.text-info h1 {
+  text-transform: capitalize;
+  font-size: 45px;
+  font-weight: bold;
+}
+.text-info p {
+  color: black;
+  font-weight: 200;
+  font-size: 19px;
+  line-height: 25px;
+  text-align: justify;
+  padding-right: 80px;
+  text-transform: capitalize;
+}
+.about-btns {
+  width: 80%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 11px 0px;
+}
+.about-btns .abtn {
+  padding: 15px 20px;
+  text-transform: capitalize;
+  border: none;
+  font-size: 16px;
+  font-weight: bold;
+  text-align: center;
+  box-shadow: 0px 1px 3px 1px gray;
+}
+.about-btns .abtn:hover {
+  color: white;
+  background-color: rgb(64, 238, 130);
+  cursor: pointer;
+}
+.abtn span {
+  color: black;
+  font-size: 25px;
+  margin-right: 11px;
+}
+/* About section */
+
+/* order section */
+.order {
+  width: 100%;
+  height: auto;
+  display: flex;
+  flex-direction: column;
+  gap: 51px;
+  background-color: rgba(213, 212, 212, 0.8);
+}
+.formsection {
+  width: 100%;
+  height: auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 0 100px;
+}
+.first {
+  flex: 1;
+  height: 85vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  background-color: white;
+  box-shadow: 0px 1px 3px 0px gray;
+  padding: 50px 5px;
+}
+.second {
+  flex: 1;
+  height: 85vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 4px;
+  background-color: white;
+  box-shadow: 0px 1px 3px 0px gray;
+  padding: 50px 5px;
+}
+.fgroup {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  margin-top: 11px;
+  margin-left: 51px;
+}
+.fgroup label {
+  font-size: 20px;
+  text-transform: capitalize;
+  color: gray;
+}
+.fgroup input,
+textarea {
+  width: 70%;
+  padding: 17px 11px;
+  outline: none;
+  border: none;
+  border-radius: 5px;
+  background-color: rgba(213, 212, 212, 0.3);
+  box-shadow: 0px 1px 3px 0px gray;
+  font-weight: 100;
+}
+textarea {
+  resize: none;
+  height: 18vh;
+}
+::placeholder {
+  text-transform: capitalize;
+  color: black;
+  font-size: 15px;
+  font-weight: 100;
+}
+.obox {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 30px 0px;
+}
+.order-btn {
+  width: 20%;
+}
+.obtn:hover {
+  cursor: pointer;
+  color: white;
+  font-weight: bold;
+  background-color: rgba(7, 220, 110, 0.7);
+}
+
+/*  Footer Section */
+.big-foot {
+  width: 100%;
+  height: auto;
+  /* background-color: rgb(8, 7, 42); */
+  background-image: linear-gradient(rgb(16, 15, 15, 0.8), rgb(15, 13, 13, 0.8)),
+    url("./img/pizza.jpg");
+  background-size: 100% 100%;
+  background-attachment: fixed;
+  color: white;
+  font-size: 20px;
+  font-weight: bold;
+  text-align: center;
+  display: flex;
+  justify-content: space-around;
+  padding-top: 40px;
+  padding-bottom: 10px;
+}
+.big-foot h4 {
+  text-align: left;
+  font-size: 21px;
+  margin-bottom: 10px;
+}
+.big-foot ul {
+  display: flex;
+  flex-direction: column;
+  justify-content: start;
+  align-items: start;
+}
+.big-foot li {
+  list-style: none;
+  margin-top: 5px;
+}
+.big-foot li a {
+  text-decoration: none;
+  color: rgb(204, 193, 193);
+  font-weight: 500;
+  text-transform: capitalize;
+}
+.big-foot li a:hover {
+  color: rgb(61, 226, 155);
+}
+.line {
+  width: 100%;
+  height: 0.5px;
+  background-color: rgb(37, 50, 124);
+}
+.small-foot {
+  padding-top: 21px;
+  width: 100%;
+  height: 10vh;
+  background-color: rgb(8, 7, 42);
+  color: white;
+  font-size: 20px;
+  font-weight: bold;
+  text-align: center;
+}
+
+/* scroll btn */
+.hideshow #scroll-btn {
+  width: 45px;
+  height: 45px;
+  border-radius: 20%;
+  cursor: pointer;
+  font-size: 35px;
+  color: red;
+  background-color: yellow;
+  text-align: center;
+  box-shadow: 0px 0px 5px 1px gray;
+  position: fixed;
+  bottom: 50px;
+  right: 0;
+  margin-right: 20px;
+}
+.hideshow #scroll-btn:hover {
+  color: white;
+  background-color: rgb(63, 241, 146);
+}
+
+/* Responsive menuBar */
+.bar {
+  display: none;
+  cursor: pointer;
+}
+.bar i {
+  font-size: 35px;
+  font-weight: bold;
+}
+/* Responsive Code */
+@media (max-width: 1250px) {
+  main .info {
+    padding: 100px;
+  }
+  main .info h1 {
+    font-size: 70px;
+  }
+  .imgtext {
+    flex-direction: column;
+  }
+  .img-info img {
+    width: 95%;
+    height: 450px;
+  }
+  .text-info {
+    gap: 11px;
+    padding: 20px 50px;
+  }
+  .text-info p {
+    font-size: 20px;
+    line-height: 30px;
+  }
+  .about-btns {
+    justify-content: flex-start;
+    gap: 25px;
+  }
+  .food-card{
+    width: 320px;
+  }
+}
+@media (max-width: 1100px) {
+  .bar {
+    display: block;
+  }
+  nav {
+    height: auto;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+    box-shadow: 0px 0px 0px;
+    background-color: transparent;
+    padding: 0;
+  }
+  .logo {
+    width: 100%;
+    padding: 12px 25px;
+    background-color: rgb(255, 247, 233);
+  }
+  .menu {
+    width: 260px;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    display: none;
+    padding: 25px;
+    background-color: rgb(255, 247, 233);
+  }
+  .manu-link {
+    width: 70%;
+    flex-direction: column;
+    text-align: center;
+    margin-bottom: 30px;
+  }
+  .login-btn {
+    margin-top: 100px;
+    margin-bottom: 50px;
+  }
+  .formsection {
+    padding: 0 20px;
+  }
+}
+
+@media (max-width: 850px) {
+  main .info {
+    padding: 100px 45px;
+  }
+  main .info h1 {
+    font-size: 50px;
+  }
+  main .info p {
+    font-size: 22px;
+  }
+  .text-info {
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+  }
+  .text-info p {
+    text-align: center;
+    padding: 0;
+  }
+  .about-btns {
+    width: 100%;
+    justify-content: space-between;
+    gap: 5px;
+  }
+  .text-info button {
+    margin-top: 21px;
+  }
+  .food-card {
+    width: 100%;
+    flex-direction: row;
+    padding: 25px 15px;
+    border: 10px solid rgb(249, 249, 20,0.8);
+  }
+  .food-card img{
+    border-radius: 6px;
+    width: 40%;
+    height: 220px;
+  }
+  .price-btn{
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+    gap: 11px;
+  }
+  .price-btn a{
+    margin: 0;
+  }
+  .second{
+    gap: 18px;
+  }
+  .fgroup {
+    margin-left: 15px;
+    margin-top: 21px;
+  }
+  .fgroup label {
+    font-size: 18px;
+  }
+.fgroup input, textarea {
+    width: 98%;
+}
+::placeholder{
+  font-size: 14px;
+}
+.big-foot{
+flex-wrap: wrap;
+justify-content: space-around;
+align-items: center;
+gap: 50px;
+padding: 20px 100px;
+}
+}
+
+/*  */
+
+@media (max-width: 600px) {
+  .heading {
+    height: 8vh;
+  }
+  main .info {
+    padding: 100px 35px;
+  }
+  main .info h1 {
+    font-size: 40px;
+  }
+  main .info p {
+    font-size: 20px;
+    line-height: 25px;
+  }
+  .reuse-btn {
+    width: 50%;
+    padding: 16px 1px;
+    word-spacing: 1px;
+    font-size: 22px;
+  }
+  .text-info{
+    padding: 20px;
+  }
+  .img-info img {
+    height: 380px;
+  }
+  .about-btns {
+    display: none;
+  }
+  .text-info h1 {
+    text-align: center;
+  }
+  .text-info p{
+    line-height: 26px;
+  }
+  .dish{
+    padding: 50px;
+  }
+  .box-container{
+    margin-top: 80px;
+  }
+  .food-card{
+    flex-direction: column;
+  }
+  .food-card img {
+    width: 100%;
+  }
+  .price-btn {
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+  } 
+  .formsection{
+    flex-direction: column;
+    margin-top: 30px;
+  }
+  .first{
+    width: 100%;
+  }
+  .second{
+    width: 100%;
+  }
+  .big-foot{
+    padding: 20px 50px;
+  }
+}
+@media(width<480px){
+  .dish{
+    padding: 50px 21px;
+  }
+   .box-container{
+    margin-top: 100px;
+  }
+   .price-btn {
+    flex-direction:column;
+    justify-content:flex-start;
+    align-items: flex-start;
+  }
+  .big-foot {
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+    gap: 50px;
+    padding: 50px;
+  } 
+  .small-foot{
+    padding: 20px;
+  }
+}
